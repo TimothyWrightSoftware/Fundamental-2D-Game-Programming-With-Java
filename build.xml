@@ -1,0 +1,189 @@
+<project name="Java2DGameExamples" default="dist" basedir=".">
+	
+    <description>
+        creates the zip files for "Fundamental 2D programming with Java"
+    </description>
+	
+	<property name="dist" location="${basedir}/dist"/>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+	<mkdir dir="${dist}"/>
+  </target>
+
+   <target name="dist" depends="clean, init" description="generate the distribution" >
+   
+   <!-- Create the distribution directory -->
+	<copy todir="${dist}/section-one/CH01">
+		<fileset dir="${basedir}/CH01">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	
+	<copy todir="${dist}/section-one/CH02">
+		<fileset dir="${basedir}/CH02">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	<copy todir="${dist}/section-one/CH03">
+		<fileset dir="${basedir}/CH03">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	<copy todir="${dist}/section-one/CH04">
+		<fileset dir="${basedir}/CH04">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	<copy todir="${dist}/section-one/CH05">
+		<fileset dir="${basedir}/CH05">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	<copy todir="${dist}/section-one/CH06">
+		<fileset dir="${basedir}/CH06">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	<copy todir="${dist}/section-one/CH07">
+		<fileset dir="${basedir}/CH07">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	<copy todir="${dist}/section-one/CH08">
+		<fileset dir="${basedir}/CH08">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	
+    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+	<zip destfile="${dist}/f2dgpwj-sec01-${DSTAMP}.zip">
+		<fileset dir="${dist}/section-one"/>
+	</zip>
+	
+	<delete dir="${dist}/section-one"/>	
+	
+	<copy todir="${dist}/section-two/CH09">
+		<fileset dir="${basedir}/CH09">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	
+	<copy todir="${dist}/section-two/CH10">
+		<fileset dir="${basedir}/CH10">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	<copy todir="${dist}/section-two/CH11">
+		<fileset dir="${basedir}/CH11">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	<copy todir="${dist}/section-two/CH12">
+		<fileset dir="${basedir}/CH12">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	<copy todir="${dist}/section-two/CH13">
+		<fileset dir="${basedir}/CH13">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	<copy todir="${dist}/section-two/CH14">
+		<fileset dir="${basedir}/CH14">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	<copy todir="${dist}/section-two/CH15">
+		<fileset dir="${basedir}/CH15">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	
+    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+	<zip destfile="${dist}/f2dgpwj-sec02-${DSTAMP}.zip">
+		<fileset dir="${dist}/section-two"/>
+	</zip>
+	
+	<delete dir="${dist}/section-two"/>	
+	
+	<copy todir="${dist}/section-three/CH16">
+		<fileset dir="${basedir}/CH16">
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings/**"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	
+	<copy todir="${dist}/section-three/CH17">
+		<fileset dir="${basedir}/CH17">
+			<exclude name="**/*.jar"/>
+			<exclude name="**/.classpath"/>
+			<exclude name="**/.project"/>
+			<exclude name="**/.settings/**"/>
+			<exclude name="**/bin/**"/>
+		</fileset>
+	</copy>
+	
+    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+	<zip destfile="${dist}/f2dgpwj-sec03-${DSTAMP}.zip">
+		<fileset dir="${dist}/section-three"/>
+	</zip>
+	
+	<delete dir="${dist}/section-three"/>
+   	
+  </target>
+
+  <target name="clean" description="clean up" >
+    
+     <delete dir="${dist}"/>
+	
+  </target>
+</project>
