@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is the base script used for creating custom build scripts. -->
+<project name="common" basedir=".">
+	<dirname property="common.home" file="${ant.file.common}" />
+	<property name="junit.lib" location="${common.home}/../3rd/JUnit/junit-4.5.jar" />
+	<property name="common.bin" value="${basedir}/bin" />
+	<property name="common.lib" value="${basedir}/lib" />
+	<property name="common.docs" value="${basedir}/docs" />
+	<property name="common.test" value="${basedir}/test" />
+	<property name="common.junit" value="${basedir}/junit" />
+	<property name="common.classpath" value="common.classpath" />
+	<path id="common.classpath">
+		<pathelement location="${common.bin}" />
+	</path>
+	
+	<!-- ================================= 
+	BUILD 
+	================================= -->
+	<target name="build" description="--> Builds the project"
+		depends="project-build, clean, init, compile, jar" />
+	<target name="project-build" />
+	
+	<!-- ================================= 
+	INIT
+	 ================================= -->
+	<target name="init" depends="project-init">
+		<echo>Creating project directory structure...</echo>
+		<mkdir dir="${common.bin}" />
+		<mkdir dir="${common.lib}" />
+		<mkdir dir="${common.docs}" />
+		<mkdir dir="${common.test}" />
+		<mkdir dir="${common.junit}" />
+	</target>
+	<target name="project-init" />
+	
+	<!-- =================================
+	 CLEAN 
+	 ================================= -->
+	<target name="clean" depends="project-clean">
+		<echo>Deleting project directory structure...</echo>
+		<delete dir="${common.bin}" />
+		<delete dir="${common.lib}" />
+		<delete dir="${common.docs}" />
+		<delete dir="${common.junit}" />
+	</target>
+	<target name="project-clean" />
+	
+	<!-- ================================= 
+	COMPILE 
+	================================= -->
+	<target name="compile" depends="project-compile">
+		<property name="compile.srcdir" value="${basedir}/src;${basedir}/test" />
+		<property name="compile.destdir" value="${basedir}/bin" />
+		<property name="compile.debug" value="on" />
+		<property name="compile.classpath" value="${common.classpath}" />
+		<echo>Compiling source code...</echo>
+		<javac srcdir="${compile.srcdir}" destdir="${compile.destdir}"
+			classpathref="${compile.classpath}" debug="${compile.debug}" />
+	</target>
+	<target name="project-compile" />
+	
+	<!-- ================================= 
+	JAR 
+	================================= -->
+	<target name="jar" depends="project-jar">
+		<property name="jar.name" value="${ant.project.name}" />
+		<property name="jar.mainclass" value="" />
+		<property name="jar.classpath" value="" />
+		<property name="jar.fileset" value="jar.fileset" />
+		<property name="jar.destfile" value="${common.lib}/${jar.name}.jar" />
+		<fileset id="jar.fileset" dir="${common.bin}">
+			<exclude name="**/Test*.class" />
+			<exclude name="**/*Tests.class" />
+			<exclude name="**/*TestCase.class" />
+		</fileset>
+		<echo>Creating ${common.lib}${file.separator}${jar.name}.jar...</echo>
+		<jar destfile="${jar.destfile}">
+			<fileset refid="${jar.fileset}" />
+			<manifest>
+				<attribute name="Main-Class" value="${jar.mainclass}" />
+				<attribute name="Class-Path" value="${jar.classpath}" />
+			</manifest>
+		</jar>
+	</target>
+	<target name="project-jar" />
+	
+	<!-- ================================= 
+	SIGNJAR 
+	================================= -->
+	<target name="signjar" depends="project-signjar">
+		<property name="signjar.keystore" value="${basedir}/${ant.project.name}.keystore" />
+		<property name="signjar.alias" value="${ant.project.name}" />
+		<property name="signjar.storepass" value="storepass" />
+		<property name="signjar.validity" value="999999" />
+		<property name="signjar.jar" value="${common.lib}/${jar.name}.jar" />
+		<echo>Signing Jar File</echo>
+		<delete file="${signjar.keystore}" />
+		<genkey alias="${signjar.alias}" validity="${signjar.validity}"
+			storepass="${signjar.storepass}" 
+			keystore="${signjar.keystore}">
+			<dname>
+				<param name="CN" value="Tim Wright" />
+				<param name="OU" value="Groovy Inc." />
+				<param name="O" value="Rio Rancho" />
+				<param name="C" value="US" />
+			</dname>
+		</genkey>
+		<signjar jar="${signjar.jar}" keystore="${signjar.keystore}"
+			alias="${signjar.alias}" storepass="${signjar.storepass}" />
+		<delete file="${signjar.keystore}" />
+	</target>
+	<target name="project-signjar" />
+</project>

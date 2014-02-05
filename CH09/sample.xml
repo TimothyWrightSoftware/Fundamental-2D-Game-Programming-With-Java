@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+ <!-- This is a comment -->
+ <empty></empty>
+ <shorthand/>
+ <text>I'm some text</text>
+ <nested><child/></nested>
+ <nested-text>I'm some text <child/></nested-text>
+ <attributes attr1="value1" attr2="value2" />
+ <special-chars> &lt; &gt; &amp; &apos; &quot; </special-chars>
+ <cdata>
+ <![CDATA[
+<xml><attr="xml inside xml"/></xml>
+ ]]>
+ </cdata>
+</root>

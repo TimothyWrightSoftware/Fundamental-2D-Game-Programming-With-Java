@@ -1,0 +1,6 @@
+<model bounds="0.075" sprite="Ship.png" glow="ShipGlow.png">
+	<coord x="0.0325" y="0.0" />
+	<coord x="-0.0325" y="0.0325" />
+	<coord x="0.0" y="0.0" />
+	<coord x="-0.0325" y="-0.0325" />
+</model>

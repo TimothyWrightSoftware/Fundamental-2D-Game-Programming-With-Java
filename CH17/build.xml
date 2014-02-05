@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="complete-game" default="default">
+	
+	<description>
+Building Space Rocks
+</description>
+	
+	<property name="common.classpath" value="custom.classpath" />
+	<property name="jar.mainclass" value="javagames.completegame.CompleteGame" />
+	
+	<import file="res/assets/xml/common.xml" />
+	
+	<path id="custom.classpath">
+		<pathelement location="${basedir}/bin" />
+	</path>
+	
+	<target name="default" depends="build, signjar" description="--> This builds my first real game" />
+	
+	<target name="jar" depends="common.jar">
+		<jar update="true" destfile="lib/${ant.project.name}.jar">
+			<fileset dir="res/assets" includes="sound/**,images/**,xml/**" />
+		</jar>
+	</target>
+	
+</project>

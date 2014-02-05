@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="custom-build" default="default">
+
+	<description>
+		Extending the common.xml
+	</description>
+	
+	<property name="common.classpath" value="custom.classpath" />
+	<import file="common.xml" />
+	
+	<path id="custom.classpath">
+		<pathelement location="${basedir}/bin" />
+		<pathelement location="${junit.lib}" />
+	</path>
+	
+	<target name="default" depends="build, signjar"
+		description="--> This builds my first real game" />
+		
+</project>

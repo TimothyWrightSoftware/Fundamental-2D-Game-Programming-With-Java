@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="hello-world" default="default">
+	<description>
+		This is a simple Hello World script
+	</description>
+	<target name="default" description="target description">
+		<echo>Hello World!</echo>
+	</target>
+</project>
