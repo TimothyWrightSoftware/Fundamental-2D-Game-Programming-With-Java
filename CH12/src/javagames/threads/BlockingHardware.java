@@ -35,7 +35,7 @@ public class BlockingHardware {
 			while (!started) {
 				cond.await();
 			}
-			System.out.println("It’s Started");
+			System.out.println("It's Started");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} finally {

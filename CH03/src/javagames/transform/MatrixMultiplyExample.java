@@ -130,7 +130,7 @@ public class MatrixMultiplyExample extends JFrame implements Runnable {
 		Vector2f sun = sunMat.mul(new Vector2f());
 		g.setColor(Color.YELLOW);
 		g.fillOval((int) sun.x - 50, (int) sun.y - 50, 100, 100);
-		// draw Earth’s Orbit
+		// draw Earth's Orbit
 		g.setColor(Color.WHITE);
 		g.drawOval((int) sun.x - SCREEN_W / 4, (int) sun.y - SCREEN_W / 4,
 				SCREEN_W / 2, SCREEN_W / 2);

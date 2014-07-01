@@ -69,7 +69,7 @@ public class HighScoreMgr {
 				+ "\nWill not be able to save high scores", "Error",
 				JOptionPane.ERROR_MESSAGE);
 		// Something went wrong, so add scores so the
-		// game won’t crash...
+		// game won't crash...
 		for (String[] score : DEFAULT_SCORES) {
 			scores.add(new Score(score[0], Integer.parseInt(score[1])));
 		}

@@ -59,7 +59,7 @@ public class ImageCreator extends SimpleFramework {
 			sprite = createCustomImage();
 			File file = new File(fileName);
 			if (!ImageIO.write(sprite, type, file)) {
-				throw new IOException("No ’" + type + "’ image writer found");
+				throw new IOException("No '" + type + "' image writer found");
 			}
 			loadedFile = "SAVED: " + fileName;
 		} catch (IOException ex) {

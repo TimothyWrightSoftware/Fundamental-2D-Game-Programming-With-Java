@@ -107,7 +107,7 @@ public class FakeHardware {
 	 * after the lock is released but before the next if statement, the task
 	 * will never run...
 	 * 
-	 * Let’s pretend this Hardware driver doesn’t work well, even though that
+	 * Let's pretend this Hardware driver doesn't work well, even though that
 	 * NEVER happens :)
 	 */
 	private void setStart(int timeMS, int slices) {
@@ -127,7 +127,7 @@ public class FakeHardware {
 	private synchronized void setStop() {
 		if (running) {
 			running = false;
-			// don’t send the event
+			// don't send the event
 			// not actually done yet :)
 		}
 	}

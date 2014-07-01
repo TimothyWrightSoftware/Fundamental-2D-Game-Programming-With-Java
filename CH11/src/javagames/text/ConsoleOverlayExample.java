@@ -35,12 +35,12 @@ public class ConsoleOverlayExample extends SimpleFramework {
 		fontHeight = fm.getAscent() + fm.getDescent() + fm.getLeading();
 		currY = 0;
 		text = new Vector<String>();
-		text.add("Press the ’H’ key to");
+		text.add("Press the 'H' key to");
 		text.add("show and hide the console.");
 		text.add("Hover the mouse over the");
 		text.add("text to change transparency.");
 		text.add("Press Space Bar to move text.");
-		text.add("Press ’B’ to toggle hidden boxes.");
+		text.add("Press 'B' to toggle hidden boxes.");
 		text.add(0, text.lastElement());
 		int consoleHeight = fontHeight * (text.size() + 1);
 		console = new BufferedImage(canvas.getWidth() - 40, consoleHeight,
@@ -81,7 +81,7 @@ public class ConsoleOverlayExample extends SimpleFramework {
 	protected void updateObjects(float delta) {
 		super.updateObjects(delta);
 		if (hide && hidden == 1.0f) {
-			return; // don’t bother
+			return; // don't bother
 		}
 		if (currY > 0) {
 			currY -= delta * fontHeight;

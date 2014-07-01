@@ -62,7 +62,7 @@ public class LoadXMLExample {
 		System.out.print(", Name: " + node.getNodeName());
 		String value = node.getNodeValue() == null ? "" : node.getNodeValue()
 				.trim();
-		System.out.println(", Value: ’" + value + "’");
+		System.out.println(", Value: '" + value + "'");
 	}
 
 	private String getNodeType(Node node) {

@@ -21,7 +21,7 @@ public class BlockingQueueExample {
 			Message[] messages = Message.values();
 			for (int i = 0; i < numberOfMessages; ++i) {
 				try {
-					// don’t include last message (POISON)
+					// don't include last message (POISON)
 					int index = rand.nextInt(messages.length - 2); // 0 - 2
 					queue.put(messages[index]);
 					System.out.println("PUT(" + (i + 1) + ") "
@@ -78,7 +78,7 @@ public class BlockingQueueExample {
 		// sleep a little
 		sleep(2000); // two seconds..
 		try {
-			// Start the consumer much later, but that’s ok!
+			// Start the consumer much later, but that's ok!
 			Future<Integer> consumer = exec.submit(new Consumer());
 			try {
 				System.out.println("Messages Processed: " + consumer.get());

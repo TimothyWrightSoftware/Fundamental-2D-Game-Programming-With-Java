@@ -13,8 +13,8 @@ public class BlockingClip extends AudioStream {
 	}
 
 	/*
-	 * This guy could throw a bunch of exceptions. We’re going to wrap them all
-	 * in a custom exception handler that is a RuntimeException so we don’t have
+	 * This guy could throw a bunch of exceptions. We're going to wrap them all
+	 * in a custom exception handler that is a RuntimeException so we don't have
 	 * to catch and throw all these exceptions.
 	 */
 	@Override
@@ -56,7 +56,7 @@ public class BlockingClip extends AudioStream {
 			while (!started) {
 				cond.await();
 			}
-			System.out.println("It’s Started");
+			System.out.println("It's Started");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} finally {
@@ -74,7 +74,7 @@ public class BlockingClip extends AudioStream {
 			while (!started) {
 				cond.await();
 			}
-			System.out.println("It’s Started");
+			System.out.println("It's Started");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} finally {

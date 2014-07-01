@@ -50,7 +50,7 @@ public class TextMetricsExample extends SimpleFramework {
 		int cy = sh / 2;
 		g2d.drawLine(0, cy, sw, cy);
 		g2d.drawLine(cx, 0, cx, sh);
-		String center = "Should Center: Center Baby’s @";
+		String center = "Should Center: Center Baby's @";
 		// to calculate the x, need the width...
 		int stringWidth = g2d.getFontMetrics().stringWidth(center);
 		float dy = g2d.getFontMetrics().getLineMetrics(center, g2d)

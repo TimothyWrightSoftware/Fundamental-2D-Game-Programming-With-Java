@@ -10,7 +10,7 @@ public class ClasspathResources {
 
 	public void runTest() {
 		/*
-		 * ClassLoader uses absolute path. There is NO ’/’ at the beginning of
+		 * ClassLoader uses absolute path. There is NO '/' at the beginning of
 		 * the path!
 		 */
 		System.out.println();
@@ -30,7 +30,7 @@ public class ClasspathResources {
 		in = getClass().getResourceAsStream("Test2.txt");
 		printResource(in);
 		/*
-		 * getClass() can also use the absolute path, but it needs a ’/’ at the
+		 * getClass() can also use the absolute path, but it needs a '/' at the
 		 * start of the path.
 		 */
 		System.out.println();
@@ -42,7 +42,7 @@ public class ClasspathResources {
 		/*
 		 * Because getClass() always returns the subclass, if a subclass is
 		 * created in another package, the relative path may not be correct.
-		 * However, using an absolute path doesn’t allow packages to be moved
+		 * However, using an absolute path doesn't allow packages to be moved
 		 * around. Use the static class, which also works in static methods.
 		 */
 		System.out.println();
