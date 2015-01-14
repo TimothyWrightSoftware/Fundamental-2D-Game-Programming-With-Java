@@ -2,7 +2,7 @@ My idea is:
 
 OS-Version			Java Version		Data			Results
 
-Windows 7 			1.0.7_71 			14JAN2015		success
+Windows 7 			1.0.7_71 			TBD				not done
 Windows 7 			1.0.8_25 			TBD				not done
 
 
