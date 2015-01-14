@@ -64,12 +64,12 @@ public class DisplayModeExample extends JFrame {
    private DisplayModeWrapper[] listDisplayModes() {
       ArrayList<DisplayModeWrapper> list = new ArrayList<DisplayModeWrapper>();
       for( DisplayMode mode : graphicsDevice.getDisplayModes() ) {
-         if( mode.getBitDepth() == 32 ) {
+         //if( mode.getBitDepth() == 32 ) { // linux bug-fix Jan 2015
             DisplayModeWrapper wrap = new DisplayModeWrapper( mode );
             if( !list.contains( wrap ) ) {
                list.add( wrap );
             }
-         }
+         //}
       }
       return list.toArray( new DisplayModeWrapper[0] );
    }
@@ -103,7 +103,7 @@ public class DisplayModeExample extends JFrame {
       DisplayMode dm = wrapper.dm;
       int width = dm.getWidth();
       int height = dm.getHeight();
-      int bit = 32;
+      int bit = dm.getBitDepth(); // linux Bug-Fix Jan 2015
       int refresh = DisplayMode.REFRESH_RATE_UNKNOWN;
       return new DisplayMode( width, height, bit, refresh );
    }
