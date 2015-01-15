@@ -13,7 +13,7 @@ public class FilesAndDirectories {
 
 	public void runTest() {
 		// list files and folders
-		String dir = "C:\\temp";
+		String dir = "D:\\code examples";
 		File file = new File(dir);
 		displayInfo(0, file);
 	}

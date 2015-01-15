@@ -15,8 +15,7 @@ public class LoadXMLExample {
 	public void loadFile() {
 		InputStream in = null;
 		try {
-			in = ResourceLoader.load(LoadXMLExample.class, "sample.xml",
-					"/sample/xml");
+			in = ResourceLoader.load(LoadXMLExample.class, "sample.xml", "/sample/xml");
 			Document document = XMLUtility.parseDocument(in);
 			System.out.println("*********");
 			System.out.println("* INSPECT");

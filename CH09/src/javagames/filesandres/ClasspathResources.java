@@ -9,6 +9,10 @@ public class ClasspathResources {
 	}
 
 	public void runTest() {
+		
+		// added reminder
+		System.out.println( "Do not forget to add the ./res/asserts/lib folder to the classpath..." ); 
+		
 		/*
 		 * ClassLoader uses absolute path. There is NO '/' at the beginning of
 		 * the path!
