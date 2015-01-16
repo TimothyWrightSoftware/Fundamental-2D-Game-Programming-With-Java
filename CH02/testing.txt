@@ -2,8 +2,8 @@ My idea is:
 
 OS-Version			Java Version		Date			Results
 
-Windows 7 			1.0.7_71 			14JAN2015		success
-Windows 7 			1.0.8_25 			TBD				not done
+Windows 7 			1.0.7_71 			14JAN2015		success  
+Windows 7 			1.0.8_25 			15JAN2015		success  
 
 
 Ubuntu 14.04 		1.0.7_71 			TBD				not done
@@ -13,3 +13,8 @@ Ubuntu 14.04 		1.0.8_25 			TBD				not done
 OSX Yosemite 		1.0.7_71 			TBD				not done
 OSX Yosemite		1.0.8_25 			TBD				not done
 
+Notes
+-----
+14JAN2015 - Win7 - problem with alt key on relative mouse.  Pressing the Alt key activates the upper-left window menu,
+This causes strange problems with the mouse.  Simple to add a list of key events to consume.  You could even set a boolean
+to toggle exclusion, and only eclude the meta keys in relative mode.  Exercise for reader: e.consume()

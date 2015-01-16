@@ -3,7 +3,7 @@ My idea is:
 OS-Version			Java Version		Date			Results
 
 Windows 7 			1.0.7_71 			14JAN2015		success
-Windows 7 			1.0.8_25 			TBD				not done
+Windows 7 			1.0.8_25 			15JAN2015		success
 
 
 Ubuntu 14.04 		1.0.7_71 			TBD				not done
