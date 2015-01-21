@@ -20,6 +20,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -29,6 +30,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -37,6 +39,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -45,6 +48,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -53,6 +57,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -61,6 +66,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -69,6 +75,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -77,6 +84,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -93,6 +101,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -102,6 +111,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -110,6 +120,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -118,6 +129,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -126,6 +138,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -134,6 +147,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -142,6 +156,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -158,6 +173,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings/**"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>
@@ -168,6 +184,7 @@
 			<exclude name="**/.classpath"/>
 			<exclude name="**/.project"/>
 			<exclude name="**/.settings/**"/>
+			<exclude name="**/testing.txt"/>
 			<exclude name="**/bin/**"/>
 		</fileset>
 	</copy>

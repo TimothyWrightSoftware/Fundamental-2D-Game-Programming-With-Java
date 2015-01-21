@@ -54,6 +54,9 @@ public class FullScreenRenderingExample extends JFrame implements Runnable {
    }
    
    private DisplayMode getDisplayMode() {
+	   // Make sure to use a display mode for your system.
+	   // The DisplayMode.REFRESH_RATE_UNKNOWN and
+	   // DisplayMode.BIT_DEPTH_MULTI flags may be required.
       return new DisplayMode( 
          800, 600, 32, DisplayMode.REFRESH_RATE_UNKNOWN );
    }

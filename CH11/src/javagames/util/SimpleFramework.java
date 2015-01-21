@@ -42,6 +42,7 @@ public class SimpleFramework extends JFrame implements Runnable {
 		if (appMaintainRatio) {
 			getContentPane().setBackground(appBorder);
 			setSize(appWidth, appHeight);
+			canvas.setSize(appWidth, appHeight); // bugfix Jan 2015
 			setLayout(null);
 			getContentPane().addComponentListener(new ComponentAdapter() {
 				public void componentResized(ComponentEvent e) {

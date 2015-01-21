@@ -57,6 +57,7 @@ public class SwingFramework extends GameFramework {
 		setTitle(appTitle);
 		getContentPane().setBackground(appBorder);
 		setSize(appWidth, appHeight);
+		canvas.setSize(appWidth, appHeight); // bugfix Jan 2015
 		getContentPane().addComponentListener(new ComponentAdapter() {
 			public void componentResized(ComponentEvent e) {
 				onComponentResized(e);
